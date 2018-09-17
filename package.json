@@ -1,0 +1,17 @@
+{
+  "name": "oslobysykkel",
+  "version": "1.0.0",
+  "description": "Simple app to display info about stations and bike availability from Oslo Bysykkel",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tarjei N. Ylvisåker",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
+  }
+}
