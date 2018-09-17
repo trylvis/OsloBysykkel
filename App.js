@@ -3,6 +3,9 @@ var port    = process.env.PORT || 3000,
     request = require("request"),
     app = express();
 
+app.set("view engine", "ejs");
+
+
 // Declaring path to API
 var url = "https://oslobysykkel.no/api/v1/stations";
 
