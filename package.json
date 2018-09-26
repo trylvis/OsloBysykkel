@@ -9,7 +9,7 @@
   "author": "Tarjei N. Ylvisåker",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "async": "^2.6.1",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "request": "^2.88.0"
