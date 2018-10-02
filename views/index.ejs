@@ -1,5 +1,27 @@
-<% data.forEach(function(station){ %>
+<% include ./partials/header %>
 
-    <p><%= station.title + station.availability.bikes %></p>
+<div class="container-fluid">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Location</th>
+                <th scope="col">Locks available</th>
+                <th scope="col">Bikes available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(station){ %>
+                <tr>
+                    <th scope="row"><%= station.title %></th>
+                    <td><%= station.availability.locks %></td>
+                    <td><%= station.availability.bikes %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
 
-<% }) %>
+
+
+</div>
+
+<% include ./partials/footer %>

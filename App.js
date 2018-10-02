@@ -15,23 +15,23 @@ var url = "https://oslobysykkel.no/api/v1/stations";
 var identifier = process.env.identifierOsloBysykkel
 //var identifier = "enterkeyhere";
 
-
+// Defining API's to poll
 var stations = {
-    url: "https://oslobysykkel.no/api/v1/stations",
+    url: url,
     headers: {
       'Client-Identifier': identifier
     }
   };
 
   var availability = {
-    url: "https://oslobysykkel.no/api/v1/stations/availability",
+    url: url + "/availability",
     headers: {
       'Client-Identifier': identifier
     }
   };
 
 
-
+// GET route
   app.get("/", function(req, res) {
     function callback(error, response, body, cb) {
       if(error || response.statusCode != 200)
@@ -55,7 +55,7 @@ var stations = {
   
     async.parallel(tasks, function (err, resp) {
       if(err) {
-        //handle error here, the error could be caused by any of the tasks.
+        console.log(err);
         return;
       }
       var availabilityIdMap = resp.availability.map(function (availability) { return availability.id; });//get an array of all the availability ids
@@ -75,6 +75,7 @@ var stations = {
   });
   
   
+  
   app.listen(port, function(){
-    console.log("Running");
+    console.log("App started and listening on port " + port + "!");
   });
