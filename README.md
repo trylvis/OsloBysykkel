@@ -1,4 +1,5 @@
 # OsloBysykkel - Bike and lock availability
+[![Known Vulnerabilities](https://snyk.io/test/github/trylvis/OsloBysykkel/badge.svg?targetFile=package.json)](https://snyk.io/test/github/trylvis/OsloBysykkel?targetFile=package.json)
 
 ## Description
 Simple Node.JS app to poll Oslo Bysykkel APIs and present a table with bike and locks availability for each station
