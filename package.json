@@ -11,7 +11,7 @@
   "author": "Tarjei N. Ylvisåker",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^3.2.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "request": "^2.88.0",
